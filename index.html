@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嘟嘟-专业的酒店管理软件</title>
+</head>
+<body>
+    <div class="root"></div>
+    <script>
+        function debounce(handle,wait,immediate){
+            //首先进行参数判断
+            if(typeof handle !== 'function') throw new Error('handle must be function')
+            //默认wait为1s
+            if(typeof handle === 'undefinde') wait = 1000 
+            //如果只传入 handle 和 immediate
+            if(typeof wait === 'boolean'){
+                immediate = wait
+                wait = 1000
+            }
+            //immediate默认为flase
+            if(typeof immediate !== 'boolean') immediate = false
+            //所谓的防抖效果，我们想要实现的就是一个人为可以管理handle的执行次数
+            let timer = null
+            return function proxy(...args){
+                let self = this,
+                init = immediate && !timer
+                clearTimeout(timer)
+                timer = setTimeout(()=>{
+                    timer = null
+                    !immediate ? handle.aplly(self,args) : null
+                },
+                wait)
+                //如果立即执行
+                init ? handle.apply(self,args) : null
+            }
+        }
+
+        var i = 1;
+
+        function show() {
+            console.log('n'+i++)
+        }
+    </script>
+</body>
+</html>

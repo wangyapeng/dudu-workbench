@@ -1,0 +1,41 @@
+{
+  "name": "dqin-fe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "dependencies": {
+    "add": "^2.0.6",
+    "element-plus": "^2.3.8",
+    "html-webpack-plugin": "^5.5.3",
+    "vue": "^3.3.4",
+    "vuex": "^4.1.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "axios": "^1.4.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.27",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.1.0",
+    "style-loader": "^3.3.3",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vue-loader": "^17.2.2",
+    "vue-router": "^4.2.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
